@@ -48,12 +48,15 @@ th {
 .dateInput {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #e2ecf7;
   color: #e2ecf7;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   margin: 30px;
   text-align: center;
+}
+
+.dateInput:hover {
+  cursor: pointer;
 }
 
 .errorMsg {

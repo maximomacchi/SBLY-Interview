@@ -3,6 +3,8 @@
 // Props:
 // date: Date in ISO string format (e.g. '2020-01-01')
 // changeDate: Function to change the value of date from its parent component
+// min: *optional* Minimum date input can be set to
+// max: *optional* Maximum date input can be set to
 
 import React, { useState } from 'react';
 
@@ -18,13 +20,15 @@ function DatePicker({ date, changeDate, min, max }) {
       } else {
         setErr('Date must be within defined range');
       }
+    } else {
+      changeDate(e.target.value);
     }
   };
 
   return (
     <div>
       <form className="datePickerForm">
-        <label>Date: </label>
+        <label>Choose date: </label>
         <input
           className="dateInput"
           type="date"
