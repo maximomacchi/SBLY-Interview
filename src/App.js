@@ -14,7 +14,7 @@ const END_DATE = new Date('2020-01-05');
 // shown
 const COLS = [
   'id',
-  // 'spend',
+  'spend',
   // 'revenue',
   // 'impressions',
   // 'clicks',
@@ -33,7 +33,7 @@ const COL_NAMES = {
   profitMargin: 'Profit Margin',
   weightedAvgOfProfMarg: 'Weighted Average of Profit Margin',
   budget: 'Current Budget',
-  newBudget: 'New Budget',
+  newBudget: 'Proposed New Budget',
 };
 
 function App() {
@@ -41,6 +41,7 @@ function App() {
   const [data, setData] = useState({});
   const [cols, setCols] = useState([]);
 
+  // Function was created so it can be passed into DatePicker component
   const changeDate = (d) => {
     setDate(d);
   };
