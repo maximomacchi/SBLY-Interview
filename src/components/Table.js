@@ -4,6 +4,7 @@
 // cols: Array of columns (e.g. [col1, col2])
 // data: Array of objects consisting of col: value format
 // (e.g. [{col1: val1, col2: val2}])
+// colNames: *optional* Dictionary of column names to replace data column names
 
 import React from 'react';
 

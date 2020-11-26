@@ -1,3 +1,6 @@
+// Module to interact with SBLY API endpoints
+
+// Fetches ad insight data for days between start and end date parameters
 const fetchAdInsights = async (start, end) => {
   let adInsights = {};
   let curDate = new Date(start);
@@ -24,6 +27,7 @@ const fetchAdInsights = async (start, end) => {
   return adInsights;
 };
 
+// Fetches ad budget based on ad ID passed to function
 const fetchAdBudget = async (id) => {
   const result = await fetch('https://interview-api.sbly.com/ad/' + id, {
     method: 'GET',
